@@ -101,8 +101,7 @@ const Projects = () => {
             variants={itemVariants}
             className="text-[#6B7280] text-lg max-w-3xl mx-auto leading-relaxed"
           >
-            Here are some of my recent projects that showcase my skills in full-stack development,
-            UI/UX design, and problem-solving.
+            {"Here are some of my recent projects that showcase my skills in full-stack development, UI/UX design, and problem-solving."}
           </motion.p>
         </motion.div>
 

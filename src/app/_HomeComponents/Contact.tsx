@@ -55,7 +55,7 @@ const Contact = () => {
     setIsSubmitting(false);
     
     // You can integrate with your preferred form handling service here
-    alert('Thank you for your message! I\'ll get back to you soon.');
+    alert("Thank you for your message! I'll get back to you soon.");
   };
 
   const contactInfo = [
@@ -115,12 +115,11 @@ const Contact = () => {
               Together
             </span>
           </motion.h2>
-          <motion.p 
+          <motion.p
             variants={itemVariants}
             className="text-[#6B7280] text-lg max-w-3xl mx-auto leading-relaxed"
           >
-            I'm always interested in new opportunities and exciting projects. 
-            Whether you have a question or just want to say hi, feel free to reach out!
+            {"I'm always interested in new opportunities and exciting projects. Whether you have a question or just want to say hi, feel free to reach out!"}
           </motion.p>
         </motion.div>
 
@@ -165,7 +164,7 @@ const Contact = () => {
               </motion.h4>
               
               <div className="flex gap-4">
-                {socialLinks.map((social, index) => (
+                {socialLinks.map((social) => (
                   <motion.a
                     key={social.name}
                     href={social.href}

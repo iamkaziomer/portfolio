@@ -13,6 +13,7 @@ const Header = () => {
     { href: '#about', label: 'About' },
     { href: '#tech-stack', label: 'Tech Stack' },
     { href: '#projects', label: 'Projects' },
+    { href: '/blog', label: 'Blog' },
     { href: '#contact', label: 'Contact' },
   ];
 
@@ -39,10 +40,14 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollToSection = (href: string) => {
-    const element = document.getElementById(href.substring(1));
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+  const handleNavigation = (href: string) => {
+    if (href.startsWith('#')) {
+      const element = document.getElementById(href.substring(1));
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      window.location.href = href;
     }
     setIsMenuOpen(false);
   };
@@ -58,7 +63,7 @@ const Header = () => {
         <motion.div
           whileHover={{ scale: 1.05 }}
           className="font-semibold text-xl cursor-pointer"
-          onClick={() => scrollToSection('#home')}
+          onClick={() => handleNavigation('#home')}
         >
           Kazi Omer
         </motion.div>
@@ -68,7 +73,7 @@ const Header = () => {
           {navItems.map((item) => (
             <motion.button
               key={item.href}
-              onClick={() => scrollToSection(item.href)}
+              onClick={() => handleNavigation(item.href)}
               className={`relative px-3 py-2 transition-colors duration-200 ${
                 activeSection === item.href.substring(1)
                   ? 'text-[#151515]'
@@ -123,7 +128,7 @@ const Header = () => {
               {navItems.map((item, index) => (
                 <motion.button
                   key={item.href}
-                  onClick={() => scrollToSection(item.href)}
+                  onClick={() => handleNavigation(item.href)}
                   className={`text-left py-2 transition-colors ${
                     activeSection === item.href.substring(1)
                       ? 'text-[#151515] font-medium'

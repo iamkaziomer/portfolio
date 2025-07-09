@@ -87,11 +87,11 @@ const HeroSection = () => {
             variants={itemVariants}
             className="mb-6"
           >
-            <motion.span 
+            <motion.span
               className="inline-block text-[#6B7280] text-sm font-medium mb-4 px-4 py-2 bg-white/50 rounded-full"
               whileHover={{ scale: 1.05 }}
             >
-              👋 Hello, I'm
+              {"👋 Hello, I'm"}
             </motion.span>
             
             <motion.h1 
@@ -105,13 +105,11 @@ const HeroSection = () => {
             </motion.h1>
           </motion.div>
 
-          <motion.p 
+          <motion.p
             variants={itemVariants}
             className="text-[#6B7280] text-lg md:text-xl leading-relaxed mb-8 max-w-xl"
           >
-            I craft exceptional digital experiences with modern technologies. 
-            Specialized in React, Next.js, Node.js, and cloud solutions. 
-            Let's build something amazing together.
+            {"I craft exceptional digital experiences with modern technologies. Specialized in React, Next.js, Node.js, and cloud solutions. Let's build something amazing together."}
           </motion.p>
 
           {/* CTA Buttons */}

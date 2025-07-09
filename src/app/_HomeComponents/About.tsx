@@ -83,12 +83,11 @@ const About = () => {
               Digital Excellence
             </span>
           </motion.h2>
-          <motion.p 
+          <motion.p
             variants={itemVariants}
             className="text-[#6B7280] text-lg max-w-3xl mx-auto leading-relaxed"
           >
-            I'm a dedicated Full-Stack Developer with a passion for crafting exceptional digital experiences. 
-            With expertise in modern web technologies, I transform ideas into scalable, user-friendly applications.
+            {"I'm a dedicated Full-Stack Developer with a passion for crafting exceptional digital experiences. With expertise in modern web technologies, I transform ideas into scalable, user-friendly applications."}
           </motion.p>
         </motion.div>
 
@@ -104,21 +103,15 @@ const About = () => {
             
             <motion.div variants={itemVariants} className="space-y-4 text-[#6B7280] leading-relaxed">
               <p>
-                My journey in software development began with curiosity and has evolved into a passion for 
-                creating meaningful digital solutions. I specialize in building full-stack applications 
-                that not only look great but perform exceptionally.
+                {"My journey in software development began with curiosity and has evolved into a passion for creating meaningful digital solutions. I specialize in building full-stack applications that not only look great but perform exceptionally."}
               </p>
-              
+
               <p>
-                With experience in React, Next.js, Node.js, and cloud technologies, I've worked on 
-                diverse projects ranging from e-commerce platforms to complex web applications. 
-                I believe in writing clean, maintainable code and following industry best practices.
+                {"With experience in React, Next.js, Node.js, and cloud technologies, I've worked on diverse projects ranging from e-commerce platforms to complex web applications. I believe in writing clean, maintainable code and following industry best practices."}
               </p>
-              
+
               <p>
-                When I'm not coding, you'll find me exploring new technologies, contributing to open-source 
-                projects, or sharing knowledge with the developer community. I'm always eager to take on 
-                new challenges and collaborate on innovative projects.
+                {"When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects, or sharing knowledge with the developer community. I'm always eager to take on new challenges and collaborate on innovative projects."}
               </p>
             </motion.div>
 
