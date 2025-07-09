@@ -22,14 +22,7 @@ const TechStack = () => {
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.5,
-        ease: "easeOut",
-      },
-    },
+    visible: { opacity: 1, y: 0 },
   };
 
   const techCategories = [
@@ -99,8 +92,7 @@ const TechStack = () => {
             variants={itemVariants}
             className="text-[#6B7280] text-lg max-w-3xl mx-auto leading-relaxed"
           >
-            I stay current with the latest technologies and tools to deliver cutting-edge solutions. 
-            Here's my technical expertise across different domains.
+            {"I stay current with the latest technologies and tools to deliver cutting-edge solutions. Here's my technical expertise across different domains."}
           </motion.p>
         </motion.div>
 

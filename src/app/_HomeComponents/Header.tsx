@@ -19,7 +19,7 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = navItems.map(item => item.href.substring(1));
+      const sections = ['home', 'about', 'tech-stack', 'projects', 'contact'];
       const scrollPosition = window.scrollY + 100;
 
       for (const section of sections) {

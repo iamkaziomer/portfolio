@@ -2,23 +2,13 @@
 
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter } from 'lucide-react';
-import { useState } from 'react';
+import { Mail, Phone, Github, Linkedin } from 'lucide-react';
 
 const Contact = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
   });
-
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  });
-
-  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -34,28 +24,6 @@ const Contact = () => {
   const itemVariants = {
     hidden: { opacity: 0, y: 30 },
     visible: { opacity: 1, y: 0 },
-  };
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    // Reset form
-    setFormData({ name: '', email: '', subject: '', message: '' });
-    setIsSubmitting(false);
-    
-    // You can integrate with your preferred form handling service here
-    alert("Thank you for your message! I'll get back to you soon.");
   };
 
   const contactInfo = [
@@ -109,7 +77,7 @@ const Contact = () => {
             className="text-4xl md:text-5xl font-bold text-[#151515] mb-6"
             variants={itemVariants}
           >
-            Let's Work
+            {"Let's Work"}
             <br />
             <span className="bg-gradient-to-r from-[#151515] to-[#6B7280] bg-clip-text text-transparent">
               Together
